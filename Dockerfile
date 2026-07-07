@@ -8,7 +8,7 @@ RUN apt-get update && \
         ffmpeg \
         curl 
 
-RUN apt-get install build-essential libssl-dev libffi-dev python-dev
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential libssl-dev libffi-dev python-dev
 
 RUN apt install --fix-broken
         
