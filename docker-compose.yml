@@ -3,7 +3,7 @@ services:
   spotisub:
     container_name: spotisub
     env_file: .env
-    image: "blastbeng/spotisub:latest"
+    image: "hkerlero/spotisub:latest"
     restart: always
     volumes:
       - "./cache:/home/user/spotisub/cache"
