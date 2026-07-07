@@ -14,11 +14,11 @@ Flask-WTF
 py-sonic
 ffmpeg
 spotdl
-sqlalchemy==2.0.51
+sqlalchemy
 pyarr
 expiringdict
 musicbrainzngs
-alembic1==1.18.5
+alembic1
 dnspython
 dominate
 greenlet
