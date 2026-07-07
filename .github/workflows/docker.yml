@@ -21,7 +21,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: blastbeng/spotisub
+          images: hkerlero/spotisub
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v3
