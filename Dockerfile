@@ -1,4 +1,4 @@
-FROM python:3.10-slim-bullseye
+FROM python:3.14-slim-trixie
 
 # Install dependencies and gosu
 RUN DEBIAN_FRONTEND=noninteractive apt-get update -y --fix-missing
