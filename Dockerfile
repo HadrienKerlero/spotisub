@@ -9,7 +9,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential libssl-dev
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --fix-broken
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get upgrade python-pip -y
+RUN DEBIAN_FRONTEND=noninteractive apt-get upgrade python3-pip -y
         
 RUN curl -LO https://github.com/tianon/gosu/releases/latest/download/gosu-$(dpkg --print-architecture | awk -F- '{ print $NF }') \
         && chmod 0755 gosu-$(dpkg --print-architecture | awk -F- '{ print $NF }') \
