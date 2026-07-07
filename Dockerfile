@@ -1,4 +1,4 @@
-FROM python:3.14-slim-trixie
+FROM python:3.11-slim-bookworm
 
 # Install dependencies and gosu
 RUN DEBIAN_FRONTEND=noninteractive apt-get update -y --fix-missing
