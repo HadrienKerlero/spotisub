@@ -7,6 +7,10 @@ RUN apt-get update && \
         g++ \
         ffmpeg \
         curl 
+
+RUN apt-get install build-essential libssl-dev libffi-dev python-dev
+
+RUN apt install --fix-broken
         
 RUN curl -LO https://github.com/tianon/gosu/releases/latest/download/gosu-$(dpkg --print-architecture | awk -F- '{ print $NF }') \
         && chmod 0755 gosu-$(dpkg --print-architecture | awk -F- '{ print $NF }') \
