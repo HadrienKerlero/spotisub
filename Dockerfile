@@ -1,16 +1,13 @@
 FROM python:3.10-slim-bullseye
 
 # Install dependencies and gosu
-RUN apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y \
-        gcc \
-        g++ \
-        ffmpeg \
-        curl 
+RUN DEBIAN_FRONTEND=noninteractive apt-get update -y --fix-missing
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y gcc g++ ffmpeg curl 
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential libssl-dev libffi-dev python-dev
 
-RUN apt install --fix-broken
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --fix-broken 
         
 RUN curl -LO https://github.com/tianon/gosu/releases/latest/download/gosu-$(dpkg --print-architecture | awk -F- '{ print $NF }') \
         && chmod 0755 gosu-$(dpkg --print-architecture | awk -F- '{ print $NF }') \
